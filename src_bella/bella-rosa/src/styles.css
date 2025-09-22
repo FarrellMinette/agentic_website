@@ -1,0 +1,512 @@
+
+/*
+ * Bella Rosa Village Design Blueprint
+ * Modern Italian Aesthetic: Muted terracotta, olive, warm gold, and cream tones.
+ * Typography: Classic serif for headings, clean sans-serif for body.
+ * Layout: Generous whitespace, subtle borders/shadows, minimalist.
+ */
+
+/* --- Color Palette Variables --- */
+:root {
+    --color-cream: #F8F5ED;
+    --color-terracotta: #C28B7B;
+    --color-olive: #6B705C;
+    --color-warm-gold: #D4AF37;
+    --color-dark-olive: #3A3B35;
+    --color-light-grey: #E0E0E0;
+    --color-white: #FFFFFF;
+}
+
+/* --- Typography Variables --- */
+:root {
+    --font-heading: 'Playfair Display', Lora, serif;
+    --font-body: 'Inter', 'Open Sans', sans-serif;
+    --font-size-base: 1rem; /* 16px */
+    --line-height-base: 1.6;
+}
+
+/* --- Base Styles --- */
+html {
+    box-sizing: border-box;
+    font-size: 16px; /* Base for rem units */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-dark-olive);
+    background-color: var(--color-cream);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-dark-olive);
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--color-olive);
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-terracotta);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Generous Whitespace */
+section, .container {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Subtle Borders/Shadows */
+.card {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-light-grey);
+}
+
+/* --- Navigation Styles --- */
+header {
+    background-color: var(--color-white);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid var(--color-light-grey);
+}
+
+header nav,
+nav.top-nav,
+nav.main-nav,
+nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header nav ul,
+nav.top-nav ul,
+nav.main-nav ul,
+nav.container ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 2rem; /* Generous spacing between items */
+    padding: 0;
+    margin: 0;
+}
+
+header nav li,
+nav.top-nav li,
+nav.main-nav li,
+nav.container li {
+    margin-bottom: 0; /* Ensure no vertical margin */
+}
+
+header nav a,
+nav.top-nav a,
+nav.main-nav a,
+nav.container a {
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-dark-olive);
+    padding: 0.5rem 0.8rem;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Pill/Underline Hover Effect for Nav Links */
+header nav a:hover,
+nav.top-nav a:hover,
+nav.main-nav a:hover,
+nav.container a:hover {
+    color: var(--color-terracotta);
+    /* Option 1: Underline */
+    /* border-bottom: 2px solid var(--color-terracotta); */
+    /* Option 2: Pill effect */
+    background-color: rgba(var(--color-terracotta), 0.1); /* Light terracotta background */
+    border-radius: 20px;
+}
+
+/* Active Nav Link */
+header nav a.active,
+nav.top-nav a.active,
+nav.main-nav a.active,
+nav.container a.active {
+    color: var(--color-terracotta);
+    font-weight: 700;
+    /* Option 1: Underline */
+    /* border-bottom: 2px solid var(--color-terracotta); */
+    /* Option 2: Pill effect */
+    background-color: rgba(var(--color-terracotta), 0.15);
+    border-radius: 20px;
+}
+
+/* --- Sub-navigation (Chips/Pills) --- */
+.sub-page-navigation,
+.sub-page-nav {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to keep nav horizontal */
+    gap: 0.8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center; /* Center chips */
+}
+
+.sub-page-navigation a,
+.sub-page-nav a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--color-light-grey);
+    color: var(--color-olive);
+    border-radius: 25px; /* Pill shape */
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: capitalize; /* Keep natural casing for chips */
+    letter-spacing: 0.02em;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.sub-page-navigation a:hover,
+.sub-page-nav a:hover {
+    background-color: var(--color-terracotta);
+    color: var(--color-white);
+    border-color: var(--color-terracotta);
+    box-shadow: 0 2px 6px rgba(194, 139, 123, 0.2); /* Use RGB for terracotta */
+}
+
+.sub-page-navigation a.active,
+.sub-page-nav a.active {
+    background-color: var(--color-terracotta);
+    color: var(--color-white);
+    border-color: var(--color-terracotta);
+    font-weight: 600;
+}
+
+/* --- Section Specific Styles --- */
+.about-section {
+    background-color: var(--color-white);
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+    border: 1px solid var(--color-light-grey);
+}
+
+.about-section h2 {
+    color: var(--color-terracotta);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    color: var(--color-dark-olive);
+}
+
+.services-section {
+    padding: 3rem 2rem;
+    background-color: var(--color-cream);
+    margin-bottom: 3rem;
+}
+
+.services-section h2 {
+    text-align: center;
+    color: var(--color-olive);
+    margin-bottom: 2rem;
+}
+
+.services-section ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.services-section li {
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    border-left: 4px solid var(--color-warm-gold);
+    font-weight: 500;
+    color: var(--color-dark-olive);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.services-section li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info {
+    background-color: var(--color-white);
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+    border: 1px solid var(--color-light-grey);
+}
+
+.contact-info h2 {
+    text-align: center;
+    color: var(--color-terracotta);
+    margin-bottom: 2rem;
+}
+
+.contact-info .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info .contact-card {
+    background-color: var(--color-cream);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-light-grey);
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.contact-info .contact-card h3 {
+    font-size: 1.2rem;
+    color: var(--color-olive);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.contact-info .contact-card p {
+    margin-bottom: 0.5em;
+    font-size: 0.95rem;
+    color: var(--color-dark-olive);
+}
+
+.contact-info .contact-card a {
+    display: block;
+    margin-top: 0.5em;
+    color: var(--color-terracotta);
+    font-weight: 500;
+}
+
+.contact-info .contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.5rem; }
+
+    section, .container {
+        padding: 2.5rem 1.5rem;
+    }
+
+    header nav,
+    nav.top-nav,
+    nav.main-nav,
+    nav.container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul,
+    nav.top-nav ul,
+    nav.main-nav ul,
+    nav.container ul {
+        width: 100%;
+        justify-content: center; /* Center nav items when wrapped */
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    header nav li,
+    nav.top-nav li,
+    nav.main-nav li,
+    nav.container li {
+        flex-basis: auto; /* Allow items to take natural width */
+    }
+
+    .sub-page-navigation,
+    .sub-page-nav {
+        gap: 0.6rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .sub-page-navigation a,
+    .sub-page-nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .about-section,
+    .services-section,
+    .contact-info {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .services-section ul,
+    .contact-info .contact-grid {
+        grid-template-columns: 1fr; /* Stack items vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.3rem; }
+
+    section, .container {
+        padding: 2rem 1rem;
+    }
+
+    header {
+        padding: 1rem 1rem;
+    }
+
+    header nav ul,
+    nav.top-nav ul,
+    nav.main-nav ul,
+    nav.container ul {
+        gap: 0.8rem;
+    }
+
+    header nav a,
+    nav.top-nav a,
+    nav.main-nav a,
+    nav.container a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .sub-page-navigation a,
+    .sub-page-nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Gallery Carousel Styles */
+.image-gallery-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 90%;
+    width: 100%;
+    height: 40vh; /* Set a consistent, but responsive height for the carousel */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-image {
+    width: auto;             /* Allow the width to vary based on aspect ratio */
+    max-height: 100%;        /* Set max height to the container's height */
+    object-fit: contain;     /* This is the magic! It makes images fit without cropping. */
+    display: block;
+    margin: 0 auto;          /* Center the image horizontally */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* .carousel-image.active {
+    opacity: 1;
+} */
+
+.carousel-image.active {
+    display: block; /* Show only the active image */
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
