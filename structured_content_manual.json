@@ -1,0 +1,104 @@
+{
+    "commercial": {
+        "about_us": "Bella Rosa Village, a mixed-use development exceeding R300 million, was completed in 2009 by Propergation Management Services, Power Developments, and Atterbury Cape. It comprises approximately 13,500m2 of A-grade offices, 210 residential units, and 21 single residential erven. Located on Durban Road in Tyger Valley, it offers excellent visibility and easy access from major highways, close to Cape Town CBD, the airport, and winelands. The architecture blends traditional Italian village charm with hi-tech design and contemporary finishes, set in an attractive landscaped environment with water features and trees. It is a popular office node for top businesses. A state-of-the-art lifestyle centre provides sporting and social amenities including a boardroom, auditorium, juice bar, restaurant, braai facilities, training pool, squash courts, and a fully equipped gymnasium with an in-house bio-kinetic instructor and personal trainer. Security is paramount, featuring supervised 24-hour CCTV, patrol, front gate security, manned access control portals, and convenient, secure open and basement parking. Limited office and retail opportunities are available.",
+        "contact_info": {
+            "managing_agents": {
+                "name": "Propergation Estates",
+                "phone": "021 - 914 6444",
+                "email": "management@bellarosa.co.za",
+                "website": "www.propergation.co.za"
+            },
+            "commercial_agent": {
+                "name": "Ryan Hutchinson",
+                "phone": "021 914 6444 / 083 724 3165",
+                "email": "ryan@propergation.co.za"
+            },
+            "sales_leasing_manager": {
+                "name": "Johan Store",
+                "phone": "083 724 3165 / 021 914 6444",
+                "email": "johan@propergation.co.za"
+            },
+            "caretaker": {
+                "name": "Leon Dekker",
+                "phone": "021 - 914 8347 / 084 749 2000"
+            },
+            "security": {
+                "phone": "021-914 4947"
+            }
+        },
+        "services": [
+            "A-grade office space for sale/to let",
+            "Limited office and retail opportunities",
+            "Secure office environment",
+            "Easy access & good visibility from Durban Road",
+            "Excellent signage exposure",
+            "Free gym membership",
+            "Lifestyle Centre with conferencing facilities (boardroom, auditorium)",
+            "Training pool",
+            "Squash courts",
+            "Fully equipped gymnasium with in-house bio-kinetic instructor and personal trainer",
+            "Juice bar and restaurant",
+            "Braai facilities",
+            "24-hour CCTV and patrol security",
+            "Manned access control portals",
+            "Convenient and secure open and basement parking"
+        ],
+        "rates": {
+            "office_space": "Sales prices and rental tariffs to be confirmed",
+            "example_sale": "Catnia commercial building purchased for R18.5m"
+        },
+        "gallery": [
+            "Balconies",
+            "Exterior",
+            "Interior",
+            "Lifestyle Centre",
+            "Pool Area",
+            "Gym Area"
+        ]
+    },
+    "residential": {
+        "about_us": "Bella Rosa Village offers a secure and tranquil residential lifestyle with direct access from Durban Road, within walking distance of Tyger Valley Centre, adjacent to High Street Shopping Village, and close to schools, medical care facilities, and major highways. The village is designed for privacy and space, featuring cobbled walkways, indigenous blooms, trees, bustling bird life, and water features. Security is paramount with 24-hour patrol, front gate security, and commanding portals for easy access control. A state-of-the-art lifestyle centre caters to all sporting and social amenities, including a reception, boardroom, lounges, mini-theatre, full kitchen, braai facilities, squash courts, a fully-equipped gymnasium with an in-house bio-kinetic instructor and personal trainer, and a children's swimming pool. Only 6 prime erven are still for sale, offering the opportunity to build a dream house. Bella Rosa Village was designed by Dennis Moss Partnership in association with EBESA Architects for developers Propergation Estates, Atterbury, and Power Developments.",
+        "contact_info": {
+            "managing_agents": {
+                "name": "Propergation Estates",
+                "phone": "021 - 914 6444",
+                "email": "management@bellarosa.co.za",
+                "website": "www.propergation.co.za"
+            },
+            "residential_agents": [
+                {
+                    "name": "Deon Arp",
+                    "phone": "082 651 5856"
+                },
+                {
+                    "name": "Herman Stemmet",
+                    "phone": "082 257 0201"
+                }
+            ],
+            "residential_agent_email": "info@elementsrealestate.co.za",
+            "caretaker": {
+                "name": "Leon Dekker",
+                "phone": "021 - 914 8347 / 084 749 2000"
+            },
+            "security": {
+                "phone": "021-914 4947"
+            }
+        },
+        "services": [
+            "Secure style of living with 24-hour patrol and front gate security",
+            "Access control",
+            "Lifestyle Centre amenities: reception, boardroom, lounges, mini-theatre, full kitchen, braai facilities",
+            "Squash courts",
+            "Fully-equipped gymnasium with in-house bio-kinetic instructor and personal trainer",
+            "Children's swimming pool",
+            "Prime erven for sale"
+        ],
+        "rates": null,
+        "gallery": [
+            "Exterior",
+            "Lifestyle Centre",
+            "Water Features & Blooms"
+        ]
+    },
+    "links": []
+}
