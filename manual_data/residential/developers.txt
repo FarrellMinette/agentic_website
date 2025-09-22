@@ -1,2 +1,7 @@
 DEVELOPERS
 Bella Rosa Village was designed by architects: Dennis Moss Partnership in association with EBESA Architects for developers Propergation Estates, Atterbury and Power Developments - well-known in the Cape for outstanding developments at nearby High Street Shopping Village, Kanonberg and Theussen Island in Knysna, respectively.
+
+Photos: 
+* images/residential/atterbury.png
+* images/residential/images/power.png
+* images/residential/images/propergation.png

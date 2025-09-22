@@ -43,7 +43,7 @@ def process_manual_data(llm: ChatGoogleGenerativeAI, data_directory: str, output
         - "residential": A JSON object containing information from residential properties.
         - Each sub-object should contain details like "about_us", "contact_info", "services", "rates", and "gallery".
         
-        If a category is not mentioned, its value should be null. The output must be a valid JSON object.
+        If a category is not mentioned, its value should be null. The output must be a valid JSON object. If image paths are included in the context (ens with .png), then use these paths for the galleries.
         
         Text to analyze:
         ---

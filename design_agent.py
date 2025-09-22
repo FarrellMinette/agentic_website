@@ -17,13 +17,49 @@ def generate_design_blueprint(llm: ChatGoogleGenerativeAI, structured_data_path:
         HumanMessage(content=f"""
         Analyze the following structured data and generate CSS styles.
         
-        Requirements:
-        1.  Base styles for a modern, clean, and minimalist layout with a modern Italian aesthetic (muted terracotta, olive, warm gold, and cream tones; classic serif for headings, clean sans-serif for body; generous whitespace and subtle borders/shadows).
-        2.  Navigation menus must be horizontal (items side-by-side) using flexbox. Apply styles to header nav, nav.top-nav, nav.main-nav, and nav.container. Ensure nav ul display: flex with gaps, nav li margin-bottom: 0, and allow wrapping on small screens. Keep link styling refined (uppercase, slight letter-spacing, pill/underline hover).
-        3.  Sub-navigation (.sub-page-navigation, .sub-page-nav) should render as horizontal chips/pills and wrap on small screens.
-        4.  Responsive design for desktop and mobile.
-        5.  CSS classes for key sections: .about-section, .services-section, .contact-info.
-        6.  The output must ONLY be a valid CSS block within a ```css...``` Markdown block.
+        **Key Design Principles:**
+
+        1.  **Aesthetic Inspiration**: Evolve the "Italian Tuscan Village" style. Think:
+            * **Colors**: Keep the warm, earthy palette. Use muted terracotta, rich olive green, warm stone beige, deep wine red, and sophisticated gold/bronze accents.
+            * **Textures**: Suggest subtle textures that evoke natural materials (e.g., slight paper texture for backgrounds, linen for text areas, or a subtle stucco/stone feel).
+            * **Typography**: Pair a classic, elegant serif font (for headings) with a clean, readable sans-serif font (for body text).
+            * **Imagery**: Design for large, high-quality imagery that showcases the architecture and landscape.
+        2.  **Modern and Clean Layout**:
+            * Use a spacious, uncluttered layout.
+            * Implement responsive design principles using Flexbox or Grid for adaptability across desktop, tablet, and mobile.
+            * Employ subtle shadows, smooth transitions, and elegant spacing for a premium feel.
+        3.  **Functionality & User Experience**:
+            * Clearly defined navigation bar with smooth hover effects.
+            * Readability is paramount for all text.
+            * Design attractive buttons and interactive elements.
+
+        **Requirements for the CSS Output:**
+
+        1.  **Global Styles**: Set `box-sizing`, `font-family` (serif for headings, sans-serif for body), `font-size`, and `line-height` for a consistent base.
+        2.  **Color Variables**: Define CSS custom properties (variables) for the primary and accent colors to ensure easy theming.
+        3.  **Responsive Design**: Include media queries for at least one breakpoint (e.g., for mobile devices).
+        4.  **Layout Classes**:
+            * `.container`: For max-width and centering content.
+            * `.header`: For the site-wide header/navbar.
+            * `.main-content`: For the primary content area of each page.
+            * `.footer`: For the site footer.
+            * `.section`: Generic class for distinct content blocks (e.g., about, services).
+        5.  **Typography Classes**:
+            * `.heading-primary`, `.heading-secondary`: For different levels of headings.
+            * `.body-text`: For general paragraph text.
+        6.  **Navigation & Buttons**:
+            * `.navbar`: Styles for the main navigation container.
+            * `.nav-link`: Styles for individual navigation items (including hover/active states).
+            * `.button-primary`, `.button-secondary`: Styles for call-to-action buttons (including hover states).
+        7.  **Imagery**:
+            * `.hero-image`: For full-width banner images.
+            * `.content-image`: For images within content blocks.
+        8.  **Sections for Structured Data**:
+            * `.about-section`
+            * `.services-section` (e.g., for list items)
+            * `.rates-table` (for displaying pricing information)
+            * `.gallery-grid` (for image layouts)
+            * `.contact-info` (for address, phone, email)
         
         Structured Data:
         ---

@@ -1,4 +1,24 @@
-Exterior
-Lifestyle Centre
+Exterior photos:
+* images/residential/images/exterior1.jpg
+* images/residential/images/exterior2.jpg
+* images/residential/images/exterior3.jpg
+* images/residential/images/exterior4.jpg
+* images/residential/images/exterior5.jpg
+* images/residential/images/exterior6.jpg
+* images/residential/images/exterior7.jpg
+* images/residential/images/exterior8.jpg
+Lifestyle Centre photos:
+* images/residential/images/lifestyle1.jpg
+* images/residential/images/lifestyle2.jpg
+* images/residential/images/lifestyle3.jpg
+* images/residential/images/lifestyle4.jpg
+* images/residential/images/lifestyle5.jpg
+* images/residential/images/lifestyle6.jpg
+* images/residential/images/lifestyle7.jpg
 Water Features & Blooms
+* images/residential/images/water1.jpg
+* images/residential/images/water12.jpg
+* images/residential/images/water13.jpg
+* images/residential/images/water14.jpg
+* images/residential/images/water15.jpg
  

@@ -14,15 +14,12 @@ load_dotenv()
 class OrchestratorAgent:
     def __init__(self, llm_model):
         self.llm = llm_model
-        # Note: The Orchestrator itself doesn't have tools, but it will
-        # orchestrate the calls to other agents that do.
     
     def run_automated_conversion(self, url: str):
         print(f"Orchestrator initiated AUTOMATED conversion for: {url}")
         
         raw_html = get_website_content(url)
         structured_data_path = "structured_content.json"
-        
         success_data = process_and_structure_content(self.llm, raw_html, structured_data_path)
         
         if success_data:
@@ -33,7 +30,6 @@ class OrchestratorAgent:
     def run_manual_conversion(self):
         print("Orchestrator initiated MANUAL conversion using human-provided data.")
         structured_data_path = "structured_content_manual.json"
-        
         success_data = process_manual_data(self.llm, "manual_data", structured_data_path)
         
         if success_data:
@@ -54,8 +50,6 @@ class OrchestratorAgent:
 
         if success_design:
             print("Orchestrator: Design blueprint complete. Generating website code.")
-            
-            # The code agent now safely runs after the CSS file has been created
             success_code = generate_all_website_code(self.llm, structured_data_path, css_blueprint_path, output_dir)
 
             if success_code:
@@ -67,21 +61,16 @@ class OrchestratorAgent:
 
 
 if __name__ == "__main__":
-    # Initialize the core LLM
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",
         temperature=0,
         google_api_key=os.getenv("GOOGLE_API_KEY")
     )
 
-    # Initialize the Orchestrator
     orchestrator = OrchestratorAgent(llm)
-    # target_url = "https://www.bellarosa.co.za/"
-    target_url = "https://sites.google.com/view/alex-and-minette/home"
+    target_url = "https://www.bellarosa.co.za/"
 
     if len(sys.argv) > 1 and sys.argv[1] == "manual":
-        # Run in manual mode
         orchestrator.run_manual_conversion()
     else:
-        # Run in automated mode
         orchestrator.run_automated_conversion(target_url)

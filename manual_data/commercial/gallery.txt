@@ -1,7 +1,48 @@
-Balconies
+Balconies photos
+* images/commercial/balcony_1.png
+* images/commercial/balcony_2.png
+* images/commercial/balcony_3.png
+* images/commercial/balcony_4.png
+* images/commercial/balcony_5.png
+* images/commercial/balcony_6.png
+* images/commercial/balcony_7.png
+* images/commercial/balcony_8.png
 Exterior
+* images/commercial/ext_1.png
+* images/commercial/ext_2.png
+* images/commercial/ext_3.png
+* images/commercial/ext_4.png
+* images/commercial/ext_5.png
+* images/commercial/ext_6.png
+* images/commercial/ext_7.png
+* images/commercial/ext_8.png
+* images/commercial/ext_9.png
+* images/commercial/ext_10.png
+* images/commercial/ext_11.png
+* images/commercial/ext_12.png
 Interior
+* images/commercial/int_1.png
+* images/commercial/int_2.png
+* images/commercial/int_3.png
+* images/commercial/int_4.png
+* images/commercial/int_5.png
+* images/commercial/int_6.png
+* images/commercial/int_7.png
 Lifestyle Centre
+* images/commercial/centre_1.png
+* images/commercial/centre_2.png
+* images/commercial/centre_3.png
+* images/commercial/centre_4.png
+* images/commercial/centre_5.png
 Pool Area
+* images/commercial/pool_1.png
+* images/commercial/pool_2.png
+* images/commercial/pool_3.png
+* images/commercial/pool_4.png
 Gym Area
- 
+* images/commercial/gym_1.png
+* images/commercial/gym_2.png
+* images/commercial/gym_3.png
+* images/commercial/gym_4.png
+* images/commercial/gym_5.png
+* images/commercial/gym_6.png
