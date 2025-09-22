@@ -41,7 +41,6 @@ def process_manual_data(llm: ChatGoogleGenerativeAI, data_directory: str, output
         Analyze the following text, which is a collection of content from different pages, including both commercial and residential properties. Extract and structure all relevant business information, including:
         - "commercial": A JSON object containing information from commercial properties.
         - "residential": A JSON object containing information from residential properties.
-        - "links": A list of navigation links and their URLs.
         - Each sub-object should contain details like "about_us", "contact_info", "services", "rates", and "gallery".
         
         If a category is not mentioned, its value should be null. The output must be a valid JSON object.

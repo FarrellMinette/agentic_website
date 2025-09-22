@@ -22,7 +22,7 @@ def process_and_structure_content(llm: ChatGoogleGenerativeAI, html_content: str
     # Step 2: Implement the fallback logic
     if len(clean_text) < 100:
         print("Data Agent: Insignificant content found on page. Initiating fallback web search.")
-        search_query = "Bella Rosa Village website rates floor plans contact info"
+        search_query = "Website info"
         
         # Use the search tool to find relevant text from the web
         search_results = search_tool.run(search_query)
@@ -39,32 +39,7 @@ def process_and_structure_content(llm: ChatGoogleGenerativeAI, html_content: str
     prompt = [
         SystemMessage(content="You are a data structuring expert. Your task is to extract all key information from the provided text and format it into a single JSON object. Do not include any extra text, comments, or explanations. Only provide the JSON object."),
         HumanMessage(content=f"""
-        Analyze the following text from the Bella Rosa website. Extract and structure all relevant business information, including:
-        - "commercial": page for the commercial investers
-            - "home": return to home page
-            - "about_us": A summary of the buildings's background.
-            - "floor plans": floor plans for three buildings
-            - "gallery": Photo gallery with balconies, exterior, interior, lifestyle center, pool area and gym area photos.
-            - "prices": Any pricing or rate information found.
-            - "last phase": Any new information and gallery for new buildings
-            - "emergency evacuation protocol": pdf with exit routs
-            - "rules": pdfs with sets of rules 
-            - "documentation": conditions of sale and schedule of finishes pdfs
-            - "overall site map": pdf map
-            - "location:" png map
-            - "contact us": Key details like address, phone number, and email.
-        - "residential" page for the residents
-            - "home": return to home page
-            - "about_us": A summary of the buildings's background.
-            - "developers": architecttures and developers
-            - "gallery": Photo gallery with exterior, lifestyle center, water features and blooms
-            - "plots": map of plots for sale
-            - "rules": pdfs with sets of rules 
-            - "emergency evacuation protocol": pdf with exit routs
-            - "location:" png map
-            - "contact us": Key details like address, phone number, and email.
-        
-        If a category is not mentioned, its value should be null. The output must be a valid JSON object.
+        Analyze the following text from the website. Extract and structure all relevant information. The output must be a valid JSON object.
         
         Text to analyze:
         ---
