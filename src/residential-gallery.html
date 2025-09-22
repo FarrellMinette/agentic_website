@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Residential Gallery</title>
+    <title>Residential Gallery - Bella Rosa Village</title>
     <link rel="stylesheet" href="design_blueprint.css">
+    <!-- Google Fonts for Playfair Display and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="top-nav container">
+        <nav class="top-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="commercial.html">Commercial</a></li>
-                <li><a href="residential.html">Residential</a></li>
+                <li><a href="residential.html" class="active">Residential</a></li>
             </ul>
         </nav>
     </header>
@@ -22,15 +26,28 @@
         <section class="container">
             <h1>Residential Gallery</h1>
             
-            <p>Explore the various categories of our residential projects, showcasing the diverse aspects of our design and development.</p>
-
-            <div class="gallery-categories">
-                <h2>Gallery Categories</h2>
+            <nav class="sub-page-nav">
                 <ul>
-                    <li>Exterior</li>
-                    <li>Lifestyle Centre</li>
-                    <li>Water Features & Blooms</li>
+                    <li><a href="residential-about_us.html">About Us</a></li>
+                    <li><a href="residential-gallery.html" class="active">Gallery</a></li>
+                    <li><a href="residential-rates.html">Rates</a></li>
+                    <li><a href="residential-contact_info.html">Contact Info</a></li>
                 </ul>
+            </nav>
+
+            <div class="gallery-grid">
+                <div class="card">
+                    <h3>Exterior</h3>
+                    <p>Showcasing the elegant and diverse architectural styles of our residential exteriors, blending modern design with classic Italian influences.</p>
+                </div>
+                <div class="card">
+                    <h3>Lifestyle Centre</h3>
+                    <p>A glimpse into the vibrant and luxurious amenities available at the Bella Rosa Village Lifestyle Centre, designed for relaxation and community.</p>
+                </div>
+                <div class="card">
+                    <h3>Water Features & Blooms</h3>
+                    <p>Discover the serene beauty of our meticulously maintained water features and lush floral arrangements that adorn the residential areas.</p>
+                </div>
             </div>
         </section>
     </main>
